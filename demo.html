@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <main class="page payment-page">
+    <section class="payment-form dark" style="height: 100vh;">
+      <div class="container">
+        <div class="block-heading">
+          <h2>Payment</h2>
+          <div class="text-danger">This is a demo version, running on TESTNET Binance Smart Chain</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+        </div>
+        <!-- Don't change form action url -->
+        <form action="https://main.moiraipay.com/web/cgi-bin" method="post">
+          <div class="products">
+            <h3 class="title">Checkout</h3>
+            <div class="item">
+              <span class="price">0.5 BNB</span>
+              <p class="item-name">Product 1</p>
+              <p class="item-description">Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+              <span class="price">0.05 BNB</span>
+              <p class="item-name">Product 2</p>
+              <p class="item-description">Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="total">Total<span class="price">0.55 BNB</span></div>
+          </div>
+            <input type="hidden" name="seller" value="0x6820f09A26256cAEde98eA4Cdc51618D27070245">
+            <input type="hidden" name="chain_id" value="97">
+            <input type="hidden" name="crypto" value="BNB">
+
+            <input type="hidden" name="item_name[]" value="Product 1"> 
+            <input type="hidden" name="item_price[]" value="0.5"> 
+            <input type="hidden" name="item_quantity[]" value="1"> 
+
+            <input type="hidden" name="item_name[]" value="Product 2"> 
+            <input type="hidden" name="item_price[]" value="0.05"> 
+            <input type="hidden" name="item_quantity[]" value="1">             
+            
+            <input type="hidden" name="amount" value="0.55">
+
+            <input type="hidden" name="custom" value="ID or Json Data">
+
+            <!-- You need change gateway.gopi.in.net with your domain -->
+            <input type="hidden" name="return" value="https://gateway.gopi.in.net/demo.html"> 
+            <input type="hidden" name="cancel_return" value="https://gateway.gopi.in.net/demo.html"> 
+            <input type="hidden" name="notify_url" value="https://gateway.gopi.in.net/golden-gateway-ipn.php"> 
+            
+            <div class="form-group pt-3 pb-4 pl-3 pr-3">
+              <button type="submit" class="btn btn-primary btn-block">Proceed</button>
+            </div>
+            
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
